@@ -8,8 +8,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@expo/ngrok": "^4.1.0",
     "@react-native-community/masked-view": "0.1.10",
     "expo": "^38.0.0",
+    "ffmpeg-static": "^5.1.0",
     "react": "16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
     "react-native-gesture-handler": "~1.6.0",

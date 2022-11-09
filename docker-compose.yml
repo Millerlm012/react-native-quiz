@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  react_native_app:
+    build: 
+      context: ./expo/
+      args:
+        - NODE_ENV=development
+    ports:
+      - 19006:19006
+      - 19001:19001
+      - 19002:19002
+      - 19000:19000
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      REACT_NATIVE_PACKAGER_HOSTNAME: ${REACT_NATIVE_PACKAGER_HOSTNAME}
+      EXPO_DEVTOOLS_LISTEN_ADDRESS: ${EXPO_DEVTOOLS_LISTEN_ADDRESS}
+    # tty: true
+    volumes:
+      - ./expo/srv:/srv
+      # - ./react_native_app:/tmp/react_native_app/app:delegated
+      # - ./react_native_app/package.json:/tmp/react_native_app/package.json
+      # - ./react_native_app/package-lock.json:/tmp/react_native_app/package-lock.json
+      # - notused:/tmp/react_native_app/app/node_modules
